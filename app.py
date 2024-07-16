@@ -39,10 +39,13 @@ erick, matheus = st.columns([2,2])
 
 erick.image("erick.png",caption = "Erick Ribeiro - Contato: (12) 98174-6346")
 if erick.button("Agendar com Erick",):
-    webbrowser.open("https://wa.me/5512981746346?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20hor%C3%A1rio")
+    webbrowser.open_new_tab("https://wa.me/5512981746346?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20hor%C3%A1rio")
 
 matheus.image("matheus.png",caption = "Matheus Henrique - Contato: (12) 99770-3132")
 
 if matheus.button("Agendar com Matheus"):
-
-    webbrowser.open("https://wa.me/5512997703132?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20hor%C3%A1rio")
+    url = "https://wa.me/5512997703132?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20hor%C3%A1rio"
+    # Use JavaScript to redirect
+    js = f"window.open('{url}');"
+    html = f"<script>{js}</script>"
+    st.components.v1.html(html)
