@@ -1,6 +1,13 @@
 import streamlit as st
 import webbrowser
+from PIL import Image
 
+icon = Image.open('seven.png')
+st.set_page_config(
+    page_title ="Seven Barbershop",
+    page_icon= icon,
+    layout="wide"
+)
 # CSS para dimensionar e estilizar os botões
 button_style = """
 <style>
@@ -19,8 +26,8 @@ st.markdown(button_style, unsafe_allow_html=True)
 
 st.image('Barberia seven.png')
 
-st.subheader("Seja bem vindo à página da Seven Barbershop!")
-st.write("Com mais de 4 anos no mercado, a Seven Barbershop está localizada na Avenida Dante Siani, nº 1433, no bairro Jardim Santa Marina em Jacareí-SP.")
+st.header("Seja bem vindo à página da Seven Barbershop!")
+st.write("Com mais de 4 anos no mercado, a Seven Barbershop está localizada na Avenida Dante Siani, nº 1433, no bairro Jardim Santa Marina em Jacareí-SP. Nossa barbearia oferece uma experiência personalizada em cuidados com a aparência. Com serviços como corte de cabelo, barbaterapia, alisamento de cabelo e desenho das sobrancelhas, garantimos qualidade e estilo. Nossos profissionais são especialistas em tendências modernas e clássicas, utilizando produtos de alta qualidade Fox for Men.")
 
 with st.expander("Nosso serviços e valores"):
     comb, cort = st.columns(2)
