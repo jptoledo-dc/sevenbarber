@@ -112,5 +112,6 @@ if matheus.button("Agendar com Matheus"):
     df = pd.DataFrame(data)
     df3= pd.concat([log, df], ignore_index=True)
     df3.to_csv("log.csv",index=False)
+st.table(df3)
 
 
